@@ -1,0 +1,76 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#endTurn, 
+#undoTurn {
+  height: 15vh;
+  width: 15vw;
+  border-radius: 25%;
+}
+
+#root {
+  display: flex;
+  width: 35rem;
+  height: 35rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.black {
+  height: 4rem;
+  width: 4rem;
+  background-color: black;
+  border: 1px solid grey;
+  padding: 1px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.white {
+  height: 4rem;
+  width: 4rem;
+  background-color: white;
+  border: 1px solid grey;
+  padding: 1px;
+}
+
+.redTeam {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: red;
+  margin-top: 25%;
+}
+
+.redKing {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.blueTeam {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #1F8BE9;
+  margin-top: 25%;
+}
+
+.blueKing {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: #1F8BE9;
+}
+
+.clicked {
+  border: 3px solid #E41FE4;
+}

@@ -23,7 +23,7 @@ const store = {
 
 const setMessage = () => {
   const turn = store.redTurn ? 'red' : 'blue'
-  const message = `It is ${turn}'s turn`;
+  const message = `It's ${turn}'s turn`;
 
   const turnMsg = document.createElement('div');
   turnMsg.textContent = message;
@@ -92,7 +92,7 @@ const handleClick = (elem) => {
     // If we have clicked already, either reset if clicking the same square
     // or handle the move
     if (store.clicked) {
-      if (squareID === store.currentClick) {
+      if (squareID === store.currentClick && !store.moved) {
         toggleHighlight(currSquare);
       } else {
         handleMove(squareID);
@@ -100,7 +100,7 @@ const handleClick = (elem) => {
     } else {
       // If we haven't clicked yet, check that we are on a square with a piece
       // and modify state accordingly if we are
-      if (currSquare.hasChildNodes()) {
+      if (currSquare.hasChildNodes() && !store.moved) {
         toggleHighlight(currSquare, squareID);
       }
     }

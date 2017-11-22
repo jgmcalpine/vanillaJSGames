@@ -100,7 +100,7 @@ const handleClick = (elem) => {
     } else {
       // If we haven't clicked yet, check that we are on a square with a piece
       // and modify state accordingly if we are
-      if (currSquare.hasChildNodes()) {
+      if (currSquare.hasChildNodes() && !store.moved) {
         toggleHighlight(currSquare, squareID);
       }
     }

@@ -94,7 +94,7 @@ const handleClick = (elem) => {
     if (store.clicked) {
       if (squareID === store.currentClick && !store.moved) {
         toggleHighlight(currSquare);
-      } else {
+      } else if (!store.moved) {
         handleMove(squareID);
       }
     } else {
